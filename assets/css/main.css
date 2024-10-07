@@ -783,7 +783,7 @@ body {
 }
 .github-button {
   display: inline-block;
-  background-color: #24292e; /* GitHub color */
+  background-color: #281f1f; /* GitHub color */
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -795,7 +795,7 @@ body {
 }
 
 .github-button:hover {
-  background-color: #444c55; /* Slightly lighter on hover */
+  background-color: #3d2f2f; /* Slightly lighter on hover */
 }
 .work {
     position: relative;
