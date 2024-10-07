@@ -245,18 +245,41 @@
                     </label>
                   </span>
                 </div>
-                <div class="work-request--information">
-                  <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <input type="submit" value="Send Request">
-              </form>
+                 <div class="work-request--information">
+                <div class="information-name">
+                <input id="name" type="text" spellcheck="false" required>
+                <label for="name">Name or Company</label>
+              </div>
+              <div class="information-email">
+                <input id="email" type="email" spellcheck="false" required>
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <input type="submit" value="Send Request">
+          </form>
+          
+          <script>
+            function sendRequest(event) {
+              event.preventDefault(); // Prevent default form submission
+          
+              // Collecting input values
+              const name = document.getElementById('name').value;
+              const email = document.getElementById('email').value;
+              const options = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+                                  .map(checkbox => checkbox.value)
+                                  .join(', ');
+          
+              // Constructing mailto link
+              const subject = encodeURIComponent("Work Request from " + name);
+              const body = encodeURIComponent(`Name/Company: ${name}\nEmail: ${email}\nOptions: ${options}`);
+              const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+          
+              // Redirect to mailto link
+              window.location.href = mailtoLink;
+            }
+          </script>
+
+              
             </div>
           </li>
         </ul>
