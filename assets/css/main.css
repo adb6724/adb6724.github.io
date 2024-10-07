@@ -781,6 +781,22 @@ body {
         display: none;
     }
 }
+.github-button {
+  display: inline-block;
+  background-color: #24292e; /* GitHub color */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.github-button:hover {
+  background-color: #444c55; /* Slightly lighter on hover */
+}
 .work {
     position: relative;
     display: -webkit-box;
