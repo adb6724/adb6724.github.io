@@ -252,13 +252,6 @@ $( document ).ready(function() {
     });
 
   }
-    
-   document.querySelectorAll('.timeline-event').forEach(event => {
-        event.addEventListener('click', () => {
-            event.querySelector('.details').classList.toggle('expanded');
-        });
-    });
-
   
   function transitionLabels() {
 
